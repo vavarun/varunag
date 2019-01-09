@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 import Profile from '../components/Profile'
 
 export default function App() {
@@ -8,6 +10,9 @@ export default function App() {
 
   return (
     <>
+      <Head>
+        <title>Varun A.</title>
+      </Head>
       <Profile ref={refs.profile} />
     </>
   )

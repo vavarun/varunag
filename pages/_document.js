@@ -10,9 +10,15 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <style>{`body { margin: 0 } /* custom! */`}</style>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="description" content="Varun Agarwal" />
+          <meta name="keywords" content="Varun Agarwal, Developer, Javascript, JS, React, Barcelona, London, HTML, Node, Frontend, Full Stack"/>
+          <meta name="author" content="Varun Agarwal"/>
+          <link rel="shortcut icon" type="image/png" href="/static/favicon.ico"/>
         </Head>
-        <body className="custom_class">
+        <body>
           <Main />
           <NextScript />
         </body>
