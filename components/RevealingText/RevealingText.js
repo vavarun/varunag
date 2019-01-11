@@ -3,7 +3,9 @@ import styled from 'styled-components'
 export const Span = styled.span`
   position: relative;
   display: inline-block;
+  width: fit-content;
 `
+
 export const Block = styled.span`
   position: absolute;
   bottom: 0;

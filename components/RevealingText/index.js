@@ -28,6 +28,7 @@ BlockRevealAnimation.propTypes = {
   className: PropTypes.string,
   delay: PropTypes.number,
   duration: PropTypes.number,
+  styles: PropTypes.object,
 }
 
 BlockRevealAnimation.defaultProps = {

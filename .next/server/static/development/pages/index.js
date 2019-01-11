@@ -93,6 +93,220 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Navbar.js":
+/*!******************************!*\
+  !*** ./components/Navbar.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "next/link");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _utils_media__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/media */ "./utils/media.js");
+var _jsxFileName = "/Users/varun/Development/varunag/components/Navbar.js";
+
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n  background: #264fff;\n  border-style: none;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  font-weight: 900;\n  color: #fff;\n  padding: 20px 25px;\n  line-height: 0.75em;\n"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n  background: #fff;\n  height: 70px;\n  width: 70px;\n  justify-content: center;\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n  object-fit: cover;\n  height: 70px;\n  width: 70px;\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  text-align: left;\n  margin-right: 50px;\n  padding: 10px 50px 10px 0;\n  border: none;\n  border-bottom: 1px white solid;\n  font-size: 13px;\n  font-weight: 700;\n  color: white;\n  background-color: transparent;\n  transition: color 0.3s;\n  cursor: pointer;\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  :hover button {\n    color: rgba(150, 150, 150, 0.6);\n  }\n  :hover button:hover {\n    color: white;\n  }\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n    font-size: 20px;\n    span {\n      display: none;\n    }\n  "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  font-weight: 400;\n  margin: 0px;\n  color: white;\n  ", ";\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  right: 0px;\n  justify-content: space-between;\n  height: 70px;\n  padding: 15px;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  padding: 15px;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  right: 0px;\n  height: 70px;\n  justify-content: center;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+var Header = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.nav(_templateObject());
+var Nav = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templateObject2());
+var H2 = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.h2(_templateObject3(), _utils_media__WEBPACK_IMPORTED_MODULE_4__["default"].small(_templateObject4()));
+var LinkWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templateObject5());
+var Link = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.button(_templateObject6());
+var Img = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.img(_templateObject7());
+var ImgDiv = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templateObject8());
+var Button = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.button(_templateObject9());
+
+function Navbar() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Header, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ImgDiv, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
+    src: "/static/safari-pinned-tab.svg",
+    alt: "Varun Agarwal Developer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Nav, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LinkWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Link, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97
+    },
+    __self: this
+  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/about-me",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Link, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100
+    },
+    __self: this
+  }, "About Me")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/blog",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 102
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Link, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 103
+    },
+    __self: this
+  }, "Blog"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 106
+    },
+    __self: this
+  }, "Contact Me")));
+}
+
+Navbar.propTypes = {
+  onScrollIntoView: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func
+};
+/* harmony default export */ __webpack_exports__["default"] = (Navbar);
+
+/***/ }),
+
 /***/ "./components/Profile.js":
 /*!*******************************!*\
   !*** ./components/Profile.js ***!
@@ -113,7 +327,7 @@ var _jsxFileName = "/Users/varun/Development/varunag/components/Profile.js";
 
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  font-family: Circular, sans-serif;\n  color: #fff;\n  font-size: 50px;\n  font-weight: 700;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: Raleway, sans-serif;\n  color: #fff;\n  font-size: 20px;\n  font-weight: 300;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -123,7 +337,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["flex-direction: column-reverse;"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: Raleway, sans-serif;\n  color: #fff;\n  font-size: 30px;\n  font-weight: 400;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -133,7 +347,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: center;\n  padding: 40px;\n  flex-direction: column;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -148,8 +362,9 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var Article = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.article(_templateObject(), _utils_media__WEBPACK_IMPORTED_MODULE_2__["default"].small(_templateObject2()));
-var Text = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject3());
+var Article = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.article(_templateObject());
+var Text = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject2());
+var Text2 = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject3());
 var Profile = react__WEBPACK_IMPORTED_MODULE_0___default.a.forwardRef(function (props, ref) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Section__WEBPACK_IMPORTED_MODULE_3__["default"], {
     name: "profile",
@@ -159,13 +374,13 @@ var Profile = react__WEBPACK_IMPORTED_MODULE_0___default.a.forwardRef(function (
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 28
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Article, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 29
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RevealingText_index__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -173,22 +388,30 @@ var Profile = react__WEBPACK_IMPORTED_MODULE_0___default.a.forwardRef(function (
     duration: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 30
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Text, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 31
     },
     __self: this
-  }, "I'm Varun,")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Text, {
+  }, "Hey, I'm Varun,")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RevealingText_index__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    color: "#fff",
+    duration: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 33
     },
     __self: this
-  }, "I'm Varun,")));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Text2, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, "Software developer + Entrepreneur with a multi-disciplinary engineering background."))));
 });
 /* harmony default export */ __webpack_exports__["default"] = (Profile);
 
@@ -229,7 +452,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  position: relative;\n  display: inline-block;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n  display: inline-block;\n  width: fit-content;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -304,7 +527,8 @@ BlockRevealAnimation.propTypes = {
   color: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
   className: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
   delay: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
-  duration: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number
+  duration: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+  styles: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
 };
 BlockRevealAnimation.defaultProps = {
   className: '',
@@ -341,66 +565,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["font-size: 35px;"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["font-size: 45px;"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  margin: 0 0 15px 0;\n  text-align: center;\n  text-transform: capitalize;\n  ", " ", ";\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["padding: 15px 10px;"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["padding: 20px 15px;"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  max-width: 650px;\n  ", " ", ";\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: center;\n  transition: opacity 1.5s ease;\n  opacity: ", ";\n  height: 100vh;\n  width: 100vw;\n"]);
 
@@ -421,18 +585,15 @@ var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.section(_
   var isVisible = _ref.isVisible;
   return isVisible ? 1 : 0;
 });
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.section(_templateObject2(), _utils_media__WEBPACK_IMPORTED_MODULE_4__["default"].large(_templateObject3()), _utils_media__WEBPACK_IMPORTED_MODULE_4__["default"].small(_templateObject4()));
-var H1 = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.h1(_templateObject5(), _utils_media__WEBPACK_IMPORTED_MODULE_4__["default"].large(_templateObject6()), _utils_media__WEBPACK_IMPORTED_MODULE_4__["default"].small(_templateObject7()));
 var Section = react__WEBPACK_IMPORTED_MODULE_0___default.a.forwardRef(function (_ref2, ref) {
   var children = _ref2.children,
-      name = _ref2.name,
       styles = _ref2.styles;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_on_screen__WEBPACK_IMPORTED_MODULE_2___default.a, {
     once: true,
     partialVisibility: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 17
     },
     __self: this
   }, function (_ref3) {
@@ -443,22 +604,10 @@ var Section = react__WEBPACK_IMPORTED_MODULE_0___default.a.forwardRef(function (
       style: _objectSpread({}, styles),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 19
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 33
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H1, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 34
-      },
-      __self: this
-    }, name), children));
+    }, children);
   });
 });
 Section.propTypes = {
@@ -485,7 +634,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Profile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Profile */ "./components/Profile.js");
+/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.js");
 var _jsxFileName = "/Users/varun/Development/varunag/pages/index.js";
+
 
 
 
@@ -497,20 +648,26 @@ function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 15
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 16
     },
     __self: this
-  }, "Varun A.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Profile__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, "Varun A.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Profile__WEBPACK_IMPORTED_MODULE_2__["default"], {
     ref: refs.profile,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 19
     },
     __self: this
   }));
@@ -579,6 +736,17 @@ module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
 /***/ (function(module, exports) {
 
 module.exports = require("next/head");
+
+/***/ }),
+
+/***/ "next/link":
+/*!****************************!*\
+  !*** external "next/link" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/link");
 
 /***/ }),
 

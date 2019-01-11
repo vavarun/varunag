@@ -1,6 +1,8 @@
 import Head from 'next/head'
 
 import Profile from '../components/Profile'
+import Navbar from '../components/Navbar'
+
 
 export default function App() {
   const refs = {
@@ -13,6 +15,7 @@ export default function App() {
       <Head>
         <title>Varun A.</title>
       </Head>
+      <Navbar/>
       <Profile ref={refs.profile} />
     </>
   )

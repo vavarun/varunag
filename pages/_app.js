@@ -5,7 +5,7 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0px;
-    font-family: Circular, sans-serif;
+    font-family: Raleway, sans-serif;
     width: 100vw;
     overflow-x: hidden;
   }

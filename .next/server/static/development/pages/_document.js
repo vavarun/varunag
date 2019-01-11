@@ -168,7 +168,7 @@ function (_Document) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
-        "http-equiv": "X-UA-Compatible",
+        httpEquiv: "X-UA-Compatible",
         content: "IE=edge",
         __source: {
           fileName: _jsxFileName,
@@ -176,7 +176,7 @@ function (_Document) {
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
-        charset: "utf-8",
+        charSet: "utf-8",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 14
@@ -195,7 +195,7 @@ function (_Document) {
         content: "Varun Agarwal",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 19
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
@@ -203,7 +203,7 @@ function (_Document) {
         content: "Varun Agarwal, Developer, Javascript, JS, React, Barcelona, London, HTML, Node, Frontend, Full Stack",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 20
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
@@ -211,7 +211,7 @@ function (_Document) {
         content: "Varun Agarwal",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 24
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
@@ -220,25 +220,33 @@ function (_Document) {
         href: "/static/favicon.ico",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 25
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
+        href: "https://fonts.googleapis.com/css?family=Raleway",
+        rel: "stylesheet",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("body", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 35
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 36
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 37
         },
         __self: this
       })));

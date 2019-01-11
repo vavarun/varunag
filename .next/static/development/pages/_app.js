@@ -12410,7 +12410,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  body {\n    margin: 0px;\n    font-family: Circular, sans-serif;\n    width: 100vw;\n    overflow-x: hidden;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  body {\n    margin: 0px;\n    font-family: Raleway, sans-serif;\n    width: 100vw;\n    overflow-x: hidden;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

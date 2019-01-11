@@ -6,25 +6,36 @@ import RevealingText from './RevealingText/index'
 
 const Article = styled.article`
   display: flex;
-  align-items: center;
   justify-content: center;
-  ${media.small`flex-direction: column-reverse;`};
+  padding: 40px;
+  flex-direction: column;
 `
 
 const Text = styled.div`
-  font-family: Circular, sans-serif;
+  font-family: Raleway, sans-serif;
   color: #fff;
-  font-size: 50px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 400;
+`
+const Text2 = styled.div`
+  font-family: Raleway, sans-serif;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
 `
 
 const Profile = React.forwardRef((props, ref) => (
   <Section name="profile" ref={ref} styles={{ backgroundColor: '#111' }}>
     <Article>
       <RevealingText color="#fff" duration={3}>
-        <Text>I'm Varun,</Text>
+        <Text>Hey, I&apos;m Varun,</Text>
       </RevealingText>
-      <Text>I'm Varun,</Text>
+      <RevealingText color="#fff" duration={3}>
+        <Text2>
+          Software developer + Entrepreneur with a multi-disciplinary
+          engineering background.
+        </Text2>
+      </RevealingText>
     </Article>
   </Section>
 ))
