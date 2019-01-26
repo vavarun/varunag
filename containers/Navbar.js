@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import media from '../utils/media'
+import Toggle from '../components/Toggle'
 
 const Header = styled.nav`
   display: flex;
@@ -103,6 +104,7 @@ function Navbar() {
             <Link>Blog</Link>
           </NextLink>
         </LinkWrapper>
+        <Toggle />
         <Button>Contact Me</Button>
       </Nav>
     </Header>

@@ -28,7 +28,7 @@ export default class MyDocument extends Document {
             href="/static/favicon.ico"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Raleway"
+            href="https://fonts.googleapis.com/css?family=Raleway:200i,300,300i,400,400i,500,500i,600,600i,700,700i"
             rel="stylesheet"
           />
         </Head>

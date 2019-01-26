@@ -1,13 +1,13 @@
 import Head from 'next/head'
 
-import Profile from '../components/Profile'
-import Navbar from '../components/Navbar'
-
+import Profile from '../containers/Profile'
+import Navbar from '../containers/Navbar'
+import AboutMe from '../containers/AboutMe'
 
 export default function App() {
   const refs = {
     profile: React.createRef(),
-    resume: React.createRef(),
+    aboutMe: React.createRef(),
   }
 
   return (
@@ -15,8 +15,9 @@ export default function App() {
       <Head>
         <title>Varun A.</title>
       </Head>
-      <Navbar/>
+      <Navbar />
       <Profile ref={refs.profile} />
+      <AboutMe ref={refs.aboutMe} />
     </>
   )
 }

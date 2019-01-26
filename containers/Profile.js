@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 import media from '../utils/media'
-import Section from './Section'
-import RevealingText from './RevealingText/index'
+import Section from '../components/Section'
+import RevealingText from '../components/RevealingText/index'
 
 const Article = styled.article`
   display: flex;
