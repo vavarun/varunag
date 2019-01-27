@@ -15,9 +15,11 @@ export default function App() {
       <Head>
         <title>Varun A.</title>
       </Head>
-      <Navbar />
-      <Profile ref={refs.profile} />
-      <AboutMe ref={refs.aboutMe} />
+      <div style={{ margin: '28px 120px 28px 120px' }}>
+        <Navbar />
+        <Profile ref={refs.profile} />
+        <AboutMe ref={refs.aboutMe} />
+      </div>
     </>
   )
 }

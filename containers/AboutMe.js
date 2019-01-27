@@ -16,12 +16,6 @@ const Text = styled.div`
   font-size: 30px;
   font-weight: 400;
 `
-const Text2 = styled.div`
-  font-family: Raleway, sans-serif;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 300;
-`
 
 const Bio = styled.span`
   font-family: Raleway, sans-serif;
@@ -31,7 +25,7 @@ const Bio = styled.span`
 `
 
 const Profile = React.forwardRef((props, ref) => (
-  <Section name="profile" ref={ref} styles={{ backgroundColor: '#111' }}>
+  <Section name="profile" ref={ref}>
     <Article>
       <RevealingText color="#fff" duration={3}>
         <Text>Get to</Text>

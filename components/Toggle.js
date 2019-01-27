@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { ThemeContext } from '../pages/_app'
 
@@ -25,15 +24,15 @@ const Slider = styled.span`
   transition: 0.4s;
 
   cursor: pointer;
-  background-color: #ccc;
-  border-radius: ${p => (p.round ? 34 : 0)};
+  background-color: #252323;
+  border-radius: 38px;
 
   ${Checkbox}:checked + & {
-    background-color: #3b97d3;
+    background-color: #92ddc8;
   }
 
   ${Checkbox}:focus + & {
-    box-shadow: 0 0 1px #3b97d3;
+    box-shadow: 0 0 1px #92ddc8;
   }
 
   &:before {
@@ -44,13 +43,13 @@ const Slider = styled.span`
 
     transition: 0.4s;
 
-    height: 26px;
-    width: 26px;
+    height: 30px;
+    width: 30px;
     background-color: white;
-    border-radius: ${p => (p.round ? '50%' : '0')};
+    border-radius: 50%;
 
     ${Checkbox}:checked + & {
-      transform: translateX(56px);
+      transform: translateX(62px);
     }
   }
 `
@@ -61,6 +60,7 @@ const Img = styled.img`
   width: 24px;
   bottom: 7px;
   left: ${props => (props.toggle ? '13px' : '63px')};
+  cursor: pointer;
 `
 
 class Toggle extends React.PureComponent {

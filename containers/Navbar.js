@@ -5,16 +5,16 @@ import styled from 'styled-components'
 import media from '../utils/media'
 import Toggle from '../components/Toggle'
 
-const Header = styled.nav`
-  display: flex;
-  align-items: center;
-  padding: 15px;
+const ImgDiv = styled.div`
+  width: 100%;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  height: 70px;
+  align-items: center;
   justify-content: center;
+`
+const Img = styled.img`
+  object-fit: cover;
+  height: 60px;
+  width: 60px;
 `
 
 const Nav = styled.div`
@@ -26,7 +26,7 @@ const Nav = styled.div`
   right: 0px;
   justify-content: space-between;
   height: 70px;
-  padding: 15px;
+  margin: 28px 120px 0px 120px;
 `
 const H2 = styled.h2`
   font-weight: 400;
@@ -61,17 +61,7 @@ const Link = styled.button`
   transition: color 0.3s;
   cursor: pointer;
 `
-const Img = styled.img`
-  object-fit: cover;
-  height: 70px;
-  width: 70px;
-`
-const ImgDiv = styled.div`
-  background: #fff;
-  height: 70px;
-  width: 70px;
-  justify-content: center;
-`
+
 const Button = styled.button`
   background: #264fff;
   border-style: none;
@@ -85,14 +75,14 @@ const Button = styled.button`
 
 function Navbar() {
   return (
-    <Header>
+    <>
       <ImgDiv>
         <Img
           src="/static/safari-pinned-tab.svg"
           alt="Varun Agarwal Developer"
         />
       </ImgDiv>
-      <Nav>
+      {/* <Nav>
         <LinkWrapper>
           <NextLink href="/">
             <Link>Home</Link>
@@ -105,9 +95,8 @@ function Navbar() {
           </NextLink>
         </LinkWrapper>
         <Toggle />
-        <Button>Contact Me</Button>
-      </Nav>
-    </Header>
+      </Nav> */}
+    </>
   )
 }
 

@@ -3,6 +3,7 @@ import TrackVisibility from 'react-on-screen'
 import styled from 'styled-components'
 
 import media from '../utils/media'
+import { ThemeContext } from '../pages/_app'
 
 const Wrapper = styled.section`
   display: flex;
