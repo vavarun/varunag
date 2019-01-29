@@ -34,7 +34,7 @@ export default class MyApp extends App {
     return (
       <ThemeContext.Provider value={this.state}>
         <Container>
-          <GlobalStyle />
+          <GlobalStyle toggle={this.state.value} />
           <Component {...pageProps} />
         </Container>
       </ThemeContext.Provider>

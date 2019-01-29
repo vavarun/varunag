@@ -13,7 +13,6 @@ const Header = styled.header`
 `
 const Title = styled.h1`
   font-family: Playfair Display;
-  color: white;
   margin: 0px;
   letter-spacing: 10px;
   font-size: 100px;
@@ -51,8 +50,8 @@ function HeaderComponent() {
         <Title>Agarwal</Title>
       </RevealingText>
       <Caption>
-        Software developer + Entrepreneur with a multi-disciplinary engineering
-        background.
+        Software developer + Entrepreneur with a passion for creating
+        multi-disciplinary engineering background.
       </Caption>
       <Button>Contact Me</Button>
     </Header>

@@ -2,9 +2,8 @@ import NextLink from 'next/link'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import { ThemeContext } from '../pages/_app'
 import Toggle from '../components/Toggle'
-
-import media from '../utils/media'
 
 const ImgDiv = styled.div`
   display: flex;
@@ -46,7 +45,6 @@ const Link = styled.button`
   font-family: Roboto;
   cursor: pointer;
   font-size: 14px;
-  color: white;
   font-weight: 500;
   border: none;
   :focus {
@@ -58,25 +56,33 @@ const Link = styled.button`
 
 function Navbar({ onScrollIntoView }) {
   return (
-    <>
-      <ImgDiv>
-        <Img
-          src="/static/safari-pinned-tab.svg"
-          alt="Varun Agarwal Developer"
-        />
-      </ImgDiv>
+    <ThemeContext.Consumer>
+      {({ value }) => (
+        <>
+          <ImgDiv>
+            <Img
+              src="/static/safari-pinned-tab.svg"
+              alt="Varun Agarwal Developer"
+            />
+          </ImgDiv>
 
-      <Nav>
-        <LinkWrapper>
-          <Link onClick={() => onScrollIntoView('profile')}>Home</Link>
-          <Link onClick={() => onScrollIntoView('resume')}>About Me</Link>
-          <NextLink href="/blog">
-            <Link>Blog</Link>
-          </NextLink>
-        </LinkWrapper>
-        <Toggle />
-      </Nav>
-    </>
+          <Nav>
+            <LinkWrapper>
+              <Link toggle={value} onClick={() => onScrollIntoView('profile')}>
+                Home
+              </Link>
+              <Link toggle={value} onClick={() => onScrollIntoView('resume')}>
+                About Me
+              </Link>
+              <NextLink href="/blog">
+                <Link toggle={value}>Blog</Link>
+              </NextLink>
+            </LinkWrapper>
+            <Toggle />
+          </Nav>
+        </>
+      )}
+    </ThemeContext.Consumer>
   )
 }
 
