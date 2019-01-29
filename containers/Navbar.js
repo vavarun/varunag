@@ -37,7 +37,7 @@ const LinkWrapper = styled.div`
     color: rgba(150, 150, 150, 0.6);
   }
   :hover button:hover {
-    color: white;
+    ${props => (props.toggle ? 'color: #111;' : 'color: #fff;')}
   }
 `
 const Link = styled.button`
@@ -52,6 +52,7 @@ const Link = styled.button`
   }
   background-color: transparent;
   margin-right: 115px;
+  ${props => (props.toggle ? 'color: #111;' : 'color: #fff;')}
 `
 
 function Navbar({ onScrollIntoView }) {
