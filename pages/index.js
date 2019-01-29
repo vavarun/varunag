@@ -1,13 +1,21 @@
 import Head from 'next/head'
 
-import Profile from '../containers/Profile'
+import Header from '../containers/Header'
 import Navbar from '../containers/Navbar'
-import AboutMe from '../containers/AboutMe'
 
 export default function App() {
   const refs = {
     profile: React.createRef(),
-    aboutMe: React.createRef(),
+    resume: React.createRef(),
+  }
+
+  const scrollSectionIntoView = section => {
+    if (refs[section] && refs[section].current) {
+      refs[section].current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }
   }
 
   return (
@@ -15,11 +23,8 @@ export default function App() {
       <Head>
         <title>Varun A.</title>
       </Head>
-      <div style={{ margin: '28px 120px 28px 120px' }}>
-        <Navbar />
-        <Profile ref={refs.profile} />
-        <AboutMe ref={refs.aboutMe} />
-      </div>
+      <Navbar onScrollIntoView={scrollSectionIntoView} />
+      <Header />
     </>
   )
 }

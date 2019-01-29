@@ -9,13 +9,14 @@ export const ThemeContext = React.createContext({
 
 const GlobalStyle = createGlobalStyle`
   body {
-    margin: 0;
-    font-family: Raleway, sans-serif;
+    margin: 0px;
+    font-family: 'Roboto Condensed', Roboto, Playfair Display, sans-serif;
     width: 100vw;
     overflow-x: hidden;
     ${props =>
-      props.toggle ? 'background-color: #fff' : 'background-color: #111'}
-    ${props => (props.toggle ? 'color: #111' : 'color: #fff')}
+      props.toggle ? 'background-color: #fff;' : 'background-color: #111;'}
+    ${props => (props.toggle ? 'color: #111;' : 'color: #fff;')}
+  }
 `
 
 export default class MyApp extends App {
@@ -33,7 +34,7 @@ export default class MyApp extends App {
     return (
       <ThemeContext.Provider value={this.state}>
         <Container>
-          <GlobalStyle toggle={this.state.value} />
+          <GlobalStyle />
           <Component {...pageProps} />
         </Container>
       </ThemeContext.Provider>

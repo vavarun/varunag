@@ -1,0 +1,35 @@
+{
+  "education": [
+    {
+      "title": "Codeworks",
+      "subtitle": "Software Engeneering, Javascript",
+      "year": "Jan 2017 - Apr 2017",
+      "details": "Full-stack development program that teaches students onsite at the Barcelona office. Throughout the program, created projects using front-end JavaScript frameworks such as React/React Native, Angular.js and Polymer.js, server development with Koa and express, and databases with SQL and MongoDB during 800 hours of instruction and hands-on work."
+    },
+    {
+      "title": "Herderschule Rendsburg",
+      "subtitle": "High School",
+      "year": "2008 - 2016"
+    }
+  ],
+  "career": [
+    {
+      "title": "ePages",
+      "subtitle": "JavaScript Engineer",
+      "year": "Nov 2018 - Present"
+    },
+    {
+      "title": "Bookup",
+      "subtitle": "Co-Founder and Full-Stack Developer",
+      "year": "May 2017 - Oct 2018",
+      "details": "Built multiple large-scope apps from scratch using Node.js and GraphQL in the back-end and server-side-rendered React using Next.js in the front-end. Those apps included an extensive admin for businesses (customer management, analytics, payment systems, calendar), online booking and a website builder tool. Improved codebases by upgrading to new releases and implementing new technologies (React 16, Next.js)."
+    }
+  ],
+  "blog": [
+    {
+      "date": "31 • 12 • 2018",
+      "title": "On The Importance Of Simplicity",
+      "slug": "on-the-importance-of-simplicity"
+    }
+  ]
+}

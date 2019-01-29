@@ -1,20 +1,26 @@
 import Document, { Head, Main, NextScript } from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx)
-    return { ...initialProps }
+  static getInitialProps({ renderPage }) {
+    const sheet = new ServerStyleSheet()
+    const page = renderPage(App => props =>
+      sheet.collectStyles(<App {...props} />)
+    )
+    const styleTags = sheet.getStyleElement()
+    return { ...page, styleTags }
   }
 
   render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
+          {this.props.styleTags}
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta charSet="utf-8" />
           <meta
             name="viewport"
-            content="width=device-width, initial-scale=1.0"
+            content="initial-scale=1.0, width=device-width"
           />
           <meta name="description" content="Varun Agarwal" />
           <meta
@@ -28,7 +34,12 @@ export default class MyDocument extends Document {
             href="/static/favicon.ico"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Raleway:200i,300,300i,400,400i,500,500i,600,600i,700,700i"
+            rel="shortcut icon"
+            type="image/png"
+            href="/static/favicon.png"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900|Roboto:400,500|Roboto+Condensed:300,400"
             rel="stylesheet"
           />
         </Head>
