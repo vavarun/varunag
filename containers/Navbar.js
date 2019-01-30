@@ -12,12 +12,11 @@ const ImgDiv = styled.div`
   top: 0px;
   left: 0px;
   right: 0px;
-  padding: 15px 120px 0px 120px;
+  padding: 27px 120px 0px 120px;
 `
 const Img = styled.img`
   object-fit: cover;
-  height: 60px;
-  width: 60px;
+  height: 40px;
 `
 
 const Nav = styled.nav`
@@ -62,7 +61,11 @@ function Navbar({ onScrollIntoView }) {
         <>
           <ImgDiv>
             <Img
-              src="/static/safari-pinned-tab.svg"
+              src={
+                value
+                  ? '/static/varun-icon-sun.svg'
+                  : '/static/varun-icon-moon.svg'
+              }
               alt="Varun Agarwal Developer"
             />
           </ImgDiv>

@@ -2,6 +2,14 @@ import Head from 'next/head'
 
 import Header from '../containers/Header'
 import Navbar from '../containers/Navbar'
+import ScrollBar from '../containers/ScrollBar'
+
+import Skills from '../containers/Skills'
+import AboutMe from '../containers/AboutMe'
+import Experience from '../containers/Experience'
+import Projects from '../containers/Projects'
+import Education from '../containers/Education'
+import Contact from '../containers/Contact'
 
 export default function App() {
   const refs = {
@@ -25,6 +33,24 @@ export default function App() {
       </Head>
       <Navbar onScrollIntoView={scrollSectionIntoView} />
       <Header />
+      <div
+        style={{
+          padding: '0px 120px 28px 120px',
+          display: 'flex',
+          flexDirection: 'row',
+          height: '1000px',
+        }}
+      >
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <AboutMe />
+          <Experience />
+          <Projects />
+          <Education />
+          <Contact />
+        </div>
+        <Skills />
+        <ScrollBar />
+      </div>
     </>
   )
 }

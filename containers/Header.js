@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import RevealingText from '../components/RevealingText/index'
 
-const Header = styled.header`
+const Section = styled.header`
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,6 @@ const Header = styled.header`
 const Title = styled.h1`
   font-family: Playfair Display;
   margin: 0px;
-  letter-spacing: 10px;
   font-size: 100px;
 `
 
@@ -34,15 +33,17 @@ const Button = styled.button`
   text-transform: uppercase;
 
   border-style: none;
-  letter-spacing: 2px;
-  font-weight: 900;
+  letter-spacing: 1px;
+  font-weight: 500;
   padding: 20px 25px;
   line-height: 0.75em;
+  font-family: Roboto;
+  font-size: 16px;
 `
 
-function HeaderComponent() {
+function Header() {
   return (
-    <Header>
+    <Section>
       <RevealingText color={'#fff'}>
         <Title>Varun</Title>
       </RevealingText>
@@ -54,8 +55,8 @@ function HeaderComponent() {
         multi-disciplinary engineering background.
       </Caption>
       <Button>Contact Me</Button>
-    </Header>
+    </Section>
   )
 }
 
-export default HeaderComponent
+export default Header

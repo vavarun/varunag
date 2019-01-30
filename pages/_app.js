@@ -27,13 +27,38 @@ export default class MyApp extends App {
         value: !state.value,
       }))
     }
-    this.state = { value: false, toggleTheme: this.toggleTheme }
+    this.state = {
+      value: false,
+      toggleTheme: this.toggleTheme,
+    }
   }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+  container = React.createRef()
+
+  handleScroll = () => {
+    let totalHeight = document.body.clientHeight
+    let headerHeight = window.innerHeight
+    let scrollY = window.scrollY
+
+    this.setState({
+      scrollY,
+      headerHeight,
+      scrollPosition:
+        (scrollY - headerHeight) / (totalHeight - headerHeight - headerHeight),
+    })
+  }
+
   render() {
     const { Component, pageProps } = this.props
     return (
       <ThemeContext.Provider value={this.state}>
-        <Container>
+        <Container ref={this.container}>
           <GlobalStyle toggle={this.state.value} />
           <Component {...pageProps} />
         </Container>
