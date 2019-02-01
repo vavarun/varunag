@@ -41,7 +41,7 @@ const Button = styled.button`
   font-size: 16px;
 `
 
-function Header() {
+function Header({ onScrollIntoView }) {
   return (
     <Section>
       <RevealingText color={'#fff'}>
@@ -54,7 +54,7 @@ function Header() {
         Software developer + Entrepreneur with a passion for creating
         multi-disciplinary engineering background.
       </Caption>
-      <Button>Contact Me</Button>
+      <Button onClick={() => onScrollIntoView('contact')}>Contact Me</Button>
     </Section>
   )
 }

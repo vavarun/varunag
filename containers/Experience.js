@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import Section from '../components/Section'
 import RevealingText from '../components/RevealingText/index'
 import { ThemeContext } from '../pages/_app'
 
@@ -101,8 +102,9 @@ const JobDescription = styled.span`
   position: relative;
 `
 
-function Experience() {
-  return (
+const Experience = React.forwardRef((props, ref) => (
+  <Section name="experience" ref={ref}>
+
     <ThemeContext.Consumer>
       {({ value }) => (
         <Header>
@@ -180,7 +182,7 @@ function Experience() {
         </Header>
       )}
     </ThemeContext.Consumer>
-  )
-}
+  </Section>
+))
 
 export default Experience

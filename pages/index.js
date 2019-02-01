@@ -14,7 +14,9 @@ import Contact from '../containers/Contact'
 export default function App() {
   const refs = {
     profile: React.createRef(),
-    resume: React.createRef(),
+    aboutme: React.createRef(),
+    experience: React.createRef(),
+    contact: React.createRef(),
   }
 
   const scrollSectionIntoView = section => {
@@ -31,8 +33,8 @@ export default function App() {
       <Head>
         <title>Varun A.</title>
       </Head>
-      <Navbar onScrollIntoView={scrollSectionIntoView} />
-      <Header />
+      <Navbar onScrollIntoView={scrollSectionIntoView}/>
+      <Header onScrollIntoView={scrollSectionIntoView}/>
       <div
         style={{
           padding: '0px 120px 28px 120px',
@@ -48,13 +50,13 @@ export default function App() {
             flexDirection: 'column',
           }}
         >
-          <AboutMe />
-          <Experience />
+          <AboutMe ref={refs.aboutme}/>
+          <Experience ref={refs.experience}/>
           <Projects />
           <Education />
-          <Contact />
+          <Contact ref={refs.contact}/>
         </div>
-        <Skills />
+        <Skills/>
         <ScrollBar />
       </div>
     </>

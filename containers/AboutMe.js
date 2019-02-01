@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import Section from '../components/Section'
 import RevealingText from '../components/RevealingText/index'
 
 const Header = styled.header`
@@ -25,8 +26,8 @@ const Span = styled.span`
   margin-top: 15px;
 `
 
-function AboutMe() {
-  return (
+const AboutMe = React.forwardRef((props, ref) => (
+  <Section name="aboutme" ref={ref}>
     <Header>
       <RevealingText color={'#fff'}>
         <Title>About Me</Title>
@@ -45,7 +46,7 @@ function AboutMe() {
         development.
       </Span>
     </Header>
-  )
-}
+  </Section>
+))
 
 export default AboutMe

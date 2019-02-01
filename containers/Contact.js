@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import RevealingText from '../components/RevealingText/index'
+import Section from '../components/Section'
 
 const Header = styled.header`
   display: flex;
@@ -39,7 +40,7 @@ const ContactImg = styled.img`
   height: 25px;
 `
 
-const ContactDescription = styled.a`
+const ContactDescription = styled.span`
   font-family: Roboto Condensed;
   font-style: normal;
   font-weight: 300;
@@ -50,10 +51,11 @@ const ContactDescription = styled.a`
 
 const ProfileImg = styled.img`
   height: 150px;
+  margin-top: 10px;
 `
 
-function Contact() {
-  return (
+const Contact = React.forwardRef((props, ref) => (
+  <Section name="contact" ref={ref}>
     <Header>
       <RevealingText color={'#fff'}>
         <Title>Contact</Title>
@@ -96,7 +98,7 @@ function Contact() {
         <ProfileImg src='/static/profile-image.jpg' />
       </div>
     </Header>
-  )
-}
+  </Section>
+))
 
 export default Contact
