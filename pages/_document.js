@@ -28,6 +28,7 @@ export default class MyDocument extends Document {
             content="Varun Agarwal, Developer, Javascript, JS, React, Barcelona, London, HTML, Node, Frontend, Full Stack"
           />
           <meta name="author" content="Varun Agarwal" />
+          <meta name="google-site-verification" content="ByCv0Fi4o8CbMj92I7pG7TNuzBLOxv-ZXNKG3IE7tJk" />
           <script
             dangerouslySetInnerHTML={{
               __html: `
