@@ -39,7 +39,7 @@ export default class MyDocument extends Document {
             href="/static/favicon.png"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Roboto:400,500|Roboto+Condensed:300,400"
+            href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Roboto:400,500|Roboto+Condensed:300,300i,400,700"
             rel="stylesheet"
           />
         </Head>

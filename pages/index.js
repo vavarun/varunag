@@ -38,10 +38,16 @@ export default function App() {
           padding: '0px 120px 28px 120px',
           display: 'flex',
           flexDirection: 'row',
-          height: '1000px',
+          justifyContent: 'space-between',
         }}
       >
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <div
+          style={{
+            maxWidth: '650px',
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
           <AboutMe />
           <Experience />
           <Projects />

@@ -8,11 +8,12 @@ const Header = styled.header`
   align-items: flex-start;
   justify-content: center;
 `
-const Title = styled.h1`
+const Title = styled.div`
   font-family: Playfair Display;
-  margin: 0px;
   font-size: 36px;
   text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 700;
 `
 
 const Span = styled.span`
@@ -21,6 +22,7 @@ const Span = styled.span`
   line-height: 23px;
   font-size: 16px;
   font-style: normal;
+  margin-top: 15px;
 `
 
 function AboutMe() {
@@ -33,11 +35,14 @@ function AboutMe() {
         I am a multidisciplinary engineer specialized in JavaScript, React,
         Nodejs, client- server architecture, algorithms, and data modelling.
         Strong problem solver with a passion for making things and
-        entrepreneurial ventures. I have worked across multiple countries,
-        developing good client management, communication and organizational
-        skills along the way. My progressive engineering experience has allowed
-        me to work in business development, web technology, engineering
-        modelling and real-estate development.
+        entrepreneurial ventures.
+      </Span>
+      <Span>
+        I have worked across multiple countries, developing good client
+        management, communication and organizational skills along the way. My
+        progressive engineering experience has allowed me to work in business
+        development, web technology, engineering modelling and real-estate
+        development.
       </Span>
     </Header>
   )
