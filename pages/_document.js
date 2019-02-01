@@ -28,6 +28,16 @@ export default class MyDocument extends Document {
             content="Varun Agarwal, Developer, Javascript, JS, React, Barcelona, London, HTML, Node, Frontend, Full Stack"
           />
           <meta name="author" content="Varun Agarwal" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+                ga('create', 'UA-133657282-1', 'auto');
+                ga('send', 'pageview');
+              `,
+            }}
+          />
+          <script async src="https://www.google-analytics.com/analytics.js" />
           <link
             rel="shortcut icon"
             type="image/png"
@@ -42,6 +52,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Roboto:400,500|Roboto+Condensed:300,300i,400,700"
             rel="stylesheet"
           />
+
         </Head>
         <body>
           <Main />
