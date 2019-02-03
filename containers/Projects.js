@@ -38,7 +38,8 @@ const ProjectDescription = styled.span`
   font-family: Roboto Condensed;
   font-weight: 300;
   line-height: 23px;
-  font-size: 14px;
+  font-size: 16px;
+  font-style: normal;
   margin-top: 25px;
 `
 

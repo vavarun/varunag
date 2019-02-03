@@ -70,7 +70,7 @@ const Contact = React.forwardRef((props, ref) => (
               </ContactDescription>
             </ContactTile>
           </ClickDiv>
-          <ClickDiv href='https://www.linkedin.com/in/varun-ag/'>
+          <ClickDiv href='https://www.linkedin.com/in/varun-ag/' target="_blank">
             <ContactTile>
               <ContactImg src="/static/linkedin-icon.svg"/>
               <ContactDescription>
@@ -78,7 +78,7 @@ const Contact = React.forwardRef((props, ref) => (
               </ContactDescription>
             </ContactTile>
           </ClickDiv>
-          <ClickDiv href='https://www.github.com/vavarun'>
+          <ClickDiv href='https://www.github.com/vavarun' target="_blank">
             <ContactTile >
               <ContactImg src="/static/github-icon.svg"/>
               <ContactDescription>
@@ -86,7 +86,7 @@ const Contact = React.forwardRef((props, ref) => (
               </ContactDescription>
             </ContactTile>
           </ClickDiv>
-          <ClickDiv href='https://www.instagram.com/vavarun/'>
+          <ClickDiv href='https://www.instagram.com/vavarun/' target="_blank">
             <ContactTile>
               <ContactImg src="/static/instagram-icon.svg"/>
               <ContactDescription>

@@ -96,7 +96,6 @@ const JobDescription = styled.span`
   font-weight: 300;
   line-height: 20px;
   font-size: 14px;
-  border-left: 1px solid;
   padding: 10px;
   left: -14px;
   position: relative;
