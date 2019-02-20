@@ -24,7 +24,7 @@ const Scroll = styled.div`
     props.scroll >= 0 ? `${props.scroll * 360}px` : '0px'};
 `
 
-function Experience() {
+function ScrollBar() {
   return (
     <ThemeContext.Consumer>
       {({ scrollY, scrollPosition, headerHeight }) => {
@@ -47,4 +47,4 @@ function Experience() {
   )
 }
 
-export default Experience
+export default ScrollBar

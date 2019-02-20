@@ -69,7 +69,7 @@ const StackImg = styled.img`
 `
 
 const Projects = React.forwardRef((props, ref) => (
-  <Section name="aboutme" ref={ref}>
+  <Section name="projects" ref={ref}>
     <Header>
       <RevealingText color={'#fff'}>
         <Title>Projects</Title>
