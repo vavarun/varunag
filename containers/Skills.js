@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 
-import RevealingText from '../components/RevealingText/index'
+import media from '../utils/media'
 import { ThemeContext } from '../pages/_app'
+
+import RevealingText from '../components/RevealingText/index'
 
 const Header = styled.header`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-right: 125px;
+  ${media.large`margin-right: 100px;`}
 `
 const Title = styled.h1`
   font-family: Playfair Display;
@@ -43,45 +45,51 @@ const Img = styled.img`
 function Skills() {
   return (
     <ThemeContext.Consumer>
-        {({ value }) => (
-          <Header>
-            <RevealingText color={'#fff'}>
-              <Title>Skills</Title>
-            </RevealingText>
-            <Column>
-              <Skill>
-                <Img src="/static/react-icon.svg" />
-                React
-              </Skill>
-              <Skill>
-                <Img src="/static/nodejs-icon.svg" />
-                Nodejs
-              </Skill>
-              <Skill>
-                <Img src="/static/javascript-icon.svg" />
-                Javascript
-              </Skill>
-              <Skill>
-                <Img src="/static/mongodb-icon.svg" />
-                MongoDB
-              </Skill>
-              <Skill>
-                <Img src="/static/elasticsearch-icon.svg" />
-                ElasticSearch
-              </Skill>
-              <Skill>
-                <Img src="/static/graphql-icon.svg" />
-                GraphQL
-              </Skill>
-              <Skill>
-                <Img style={{ marginRight: '20px' }} src={value ? "/static/nextjs-icon-sun.svg" : "/static/nextjs-icon-moon.svg"} />
-                Next.js
-              </Skill>
-            </Column>
-          </Header>
-        )}
-      </ThemeContext.Consumer>
-
+      {({ value }) => (
+        <Header>
+          <RevealingText color={'#fff'}>
+            <Title>Skills</Title>
+          </RevealingText>
+          <Column>
+            <Skill>
+              <Img src="/static/react-icon.svg" />
+              React
+            </Skill>
+            <Skill>
+              <Img src="/static/nodejs-icon.svg" />
+              Nodejs
+            </Skill>
+            <Skill>
+              <Img src="/static/javascript-icon.svg" />
+              Javascript
+            </Skill>
+            <Skill>
+              <Img src="/static/mongodb-icon.svg" />
+              MongoDB
+            </Skill>
+            <Skill>
+              <Img src="/static/elasticsearch-icon.svg" />
+              ElasticSearch
+            </Skill>
+            <Skill>
+              <Img src="/static/graphql-icon.svg" />
+              GraphQL
+            </Skill>
+            <Skill>
+              <Img
+                style={{ marginRight: '20px' }}
+                src={
+                  value
+                    ? '/static/nextjs-icon-sun.svg'
+                    : '/static/nextjs-icon-moon.svg'
+                }
+              />
+              Next.js
+            </Skill>
+          </Column>
+        </Header>
+      )}
+    </ThemeContext.Consumer>
   )
 }
 

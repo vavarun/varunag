@@ -4,6 +4,8 @@ import styled from 'styled-components'
 
 import { ThemeContext } from '../pages/_app'
 import Toggle from '../components/Toggle'
+import Menu from '../components/Menu'
+import media from '../utils/media'
 
 const ImgDiv = styled.div`
   display: flex;
@@ -12,7 +14,15 @@ const ImgDiv = styled.div`
   top: 0px;
   left: 0px;
   right: 0px;
-  padding: 27px 120px 0px 120px;
+  ${media.small`
+    padding: 27px 20px 0px 20px;
+    `}
+  ${media.medium`
+    padding: 27px 50px 0px 50px;
+  `}
+  ${media.large`
+    padding: 27px 120px 0px 120px;
+  `}
 `
 const Img = styled.img`
   object-fit: cover;
@@ -23,11 +33,19 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 28px 120px 0px 120px;
   position: absolute;
   top: 0px;
   left: 0px;
   right: 0px;
+  ${media.small`
+    padding: 28px 5px 0px 20px;
+    `}
+  ${media.medium`
+    padding: 28px 50px 0px 50px;
+  `}
+  ${media.large`
+    padding: 28px 120px 0px 120px;
+  `}
 `
 
 const LinkWrapper = styled.div`
@@ -50,14 +68,14 @@ const Link = styled.button`
     outline: none;
   }
   background-color: transparent;
-  margin-right: 115px;
+  margin-right: 50px;
   ${props => (props.toggle ? 'color: #111;' : 'color: #fff;')}
 `
 
 function Navbar({ onScrollIntoView }) {
   return (
     <ThemeContext.Consumer>
-      {({ value }) => (
+      {({ value, screen }) => (
         <>
           <ImgDiv>
             <Img
@@ -71,17 +89,27 @@ function Navbar({ onScrollIntoView }) {
           </ImgDiv>
 
           <Nav>
-            <LinkWrapper>
-              <Link toggle={value} onClick={() => onScrollIntoView('aboutme')}>
-                About Me
-              </Link>
-              <Link toggle={value} onClick={() => onScrollIntoView('education')}>
-                Education
-              </Link>
-              <NextLink href="/blog">
-                <Link toggle={value}>Blog</Link>
-              </NextLink>
-            </LinkWrapper>
+            {screen !== 'large' ? (
+              <Menu theme={value} onScrollIntoView={onScrollIntoView} />
+            ) : (
+              <LinkWrapper>
+                <Link
+                  toggle={value}
+                  onClick={() => onScrollIntoView('aboutme')}
+                >
+                  About Me
+                </Link>
+                <Link
+                  toggle={value}
+                  onClick={() => onScrollIntoView('education')}
+                >
+                  Education
+                </Link>
+                <NextLink href="/blog">
+                  <Link toggle={value}>Blog</Link>
+                </NextLink>
+              </LinkWrapper>
+            )}
             <Toggle />
           </Nav>
         </>

@@ -2,17 +2,24 @@ import App, { Container } from 'next/app'
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 
+import media from '../utils/media'
+
 export const ThemeContext = React.createContext({
   value: false,
   toggleTheme: () => {},
 })
+
+const sizes = {
+  large: 1008,
+  medium: 641,
+  small: 0,
+}
 
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0px;
     font-family: 'Roboto Condensed', Roboto, Playfair Display, sans-serif;
     width: 100vw;
-    overflow-x: hidden;
     ${props =>
       props.toggle ? 'background-color: #fff;' : 'background-color: #111;'}
     ${props => (props.toggle ? 'color: #111;' : 'color: #fff;')}
@@ -32,14 +39,30 @@ export default class MyApp extends App {
       toggleTheme: this.toggleTheme,
     }
   }
+
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('resize', this.setDeviceWidth)
+    this.setState({ screen: this.setDeviceWidth(window.innerWidth) })
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('resize', this.setDeviceWidth)
   }
   container = React.createRef()
+
+  toggleTheme = () => {
+    this.setState(state => ({
+      value: !state.value,
+    }))
+    localStorage.setItem('themeColor', 'false');
+  }
+
+  setDeviceWidth = widthPx =>
+    Object.keys(sizes).find(size => {
+      return widthPx >= sizes[size]
+    })
 
   handleScroll = () => {
     let totalHeight = document.body.clientHeight

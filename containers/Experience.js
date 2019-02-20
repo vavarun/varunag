@@ -57,6 +57,7 @@ const Stack = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 20px;
+  flex-wrap: wrap;
 `
 
 const StackImg = styled.img`
@@ -103,7 +104,6 @@ const JobDescription = styled.span`
 
 const Experience = React.forwardRef((props, ref) => (
   <Section name="experience" ref={ref}>
-
     <ThemeContext.Consumer>
       {({ value }) => (
         <Header>
@@ -124,13 +124,17 @@ const Experience = React.forwardRef((props, ref) => (
           </Span>
           <StackHeading>Stack</StackHeading>
           <Stack>
-            <StackImg src="/static/react-icon.svg" />
-            <StackImg src="/static/nodejs-icon.svg" />
-            <StackImg src="/static/javascript-icon.svg" />
-            <StackImg src="/static/elasticsearch-icon.svg" />
-            <StackImg src="/static/mongodb-icon.svg" />
-            <StackImg src="/static/graphql-icon.svg" />
+            <StackImg title="React" src="/static/react-icon.svg" />
+            <StackImg title="NodeJS" src="/static/nodejs-icon.svg" />
+            <StackImg title="Javascript" src="/static/javascript-icon.svg" />
             <StackImg
+              title="Elasticsearch"
+              src="/static/elasticsearch-icon.svg"
+            />
+            <StackImg title="MongoDB" src="/static/mongodb-icon.svg" />
+            <StackImg title="GraphQL" src="/static/graphql-icon.svg" />
+            <StackImg
+              title="NextJS"
               src={
                 value
                   ? '/static/nextjs-icon-sun.svg'

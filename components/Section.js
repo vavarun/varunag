@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 const Wrapper = styled.section`
   display: flex;
-  justify-content: center;
   transition: opacity 1.5s ease;
   opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
 `

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import RevealingText from '../components/RevealingText/index'
+import Section from '../components/Section'
 
 const Header = styled.header`
   display: flex;
@@ -57,6 +58,7 @@ const Stack = styled.div`
   flex-direction: row;
   margin-top: 20px;
   align-items: center;
+  flex-wrap: wrap;
 `
 
 const StackImg = styled.img`
@@ -65,8 +67,8 @@ const StackImg = styled.img`
   margin-right: 15px;
 `
 
-function Projects() {
-  return (
+const Projects = React.forwardRef((props, ref) => (
+  <Section name="aboutme" ref={ref}>
     <Header>
       <RevealingText color={'#fff'}>
         <Title>Projects</Title>
@@ -81,12 +83,16 @@ function Projects() {
       </ProjectDescription>
       <StackHeading>Stack</StackHeading>
       <Stack>
-        <StackImg src="/static/react-icon.svg" />
-        <StackImg src="/static/redux-icon.svg" />
-        <StackImg src="/static/mongodb-icon.svg" />
-        <StackImg src="/static/nodejs-icon.svg" />
-        <StackImg src="/static/redis-icon.svg" />
-        <StackImg style={{ height: '45px' }} src="/static/jest-icon.svg" />
+        <StackImg title="React" src="/static/react-icon.svg" />
+        <StackImg title="Redux" src="/static/redux-icon.svg" />
+        <StackImg title="MongoDB" src="/static/mongodb-icon.svg" />
+        <StackImg title="NodeJS" src="/static/nodejs-icon.svg" />
+        <StackImg title="Redis" src="/static/redis-icon.svg" />
+        <StackImg
+          title="Jest"
+          style={{ height: '45px' }}
+          src="/static/jest-icon.svg"
+        />
       </Stack>
       <ProjectTitle>BLOK</ProjectTitle>
       <Year style={{ color: '#c4c4c4' }}>2017</Year>
@@ -97,10 +103,10 @@ function Projects() {
       </ProjectDescription>
       <StackHeading>Stack</StackHeading>
       <Stack>
-        <StackImg src="/static/redis-icon.svg" />
-        <StackImg src="/static/meteor-icon.svg" />
-        <StackImg src="/static/mongodb-icon.svg" />
-        <StackImg src="/static/nodejs-icon.svg" />
+        <StackImg title="Redis" src="/static/redis-icon.svg" />
+        <StackImg title="Meteor" src="/static/meteor-icon.svg" />
+        <StackImg title="MongoDB" src="/static/mongodb-icon.svg" />
+        <StackImg title="NodeJS" src="/static/nodejs-icon.svg" />
       </Stack>
       <ProjectTitle>Duet</ProjectTitle>
       <Year style={{ color: '#c4c4c4' }}>2017</Year>
@@ -111,14 +117,18 @@ function Projects() {
       </ProjectDescription>
       <StackHeading>Stack</StackHeading>
       <Stack>
-        <StackImg src="/static/react-icon.svg" />
-        <StackImg src="/static/redis-icon.svg" />
-        <StackImg style={{ height: '40px' }} src="/static/websocket-icon.svg" />
-        <StackImg src="/static/postgres-icon.svg" />
-        <StackImg src="/static/nodejs-icon.svg" />
+        <StackImg title="React" src="/static/react-icon.svg" />
+        <StackImg title="Redis" src="/static/redis-icon.svg" />
+        <StackImg
+          title="Websocket"
+          style={{ height: '40px' }}
+          src="/static/websocket-icon.svg"
+        />
+        <StackImg title="Postgres" src="/static/postgres-icon.svg" />
+        <StackImg title="NodeJS" src="/static/nodejs-icon.svg" />
       </Stack>
     </Header>
-  )
-}
+    </Section>
+))
 
 export default Projects

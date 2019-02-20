@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import RevealingText from '../components/RevealingText/index'
+import Section from '../components/Section'
 
 const Header = styled.header`
   display: flex;
@@ -45,8 +46,8 @@ const Year = styled.span`
 
 `
 
-function Education() {
-  return (
+const Education = React.forwardRef((props, ref) => (
+  <Section style={{ justifyContent: 'end' }} name="education" ref={ref}>
     <Header>
       <RevealingText color={'#fff'}>
         <Title>Education</Title>
@@ -83,7 +84,7 @@ function Education() {
       </Year>
 
     </Header>
-  )
-}
+    </Section>
+  ))
 
 export default Education

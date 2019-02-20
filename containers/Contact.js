@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import media from '../utils/media'
+
 import RevealingText from '../components/RevealingText/index'
 import Section from '../components/Section'
 
@@ -10,6 +12,8 @@ const Header = styled.header`
   justify-content: center;
   margin-top: 50px;
   height: 100vh;
+  width: 100vh;
+
 `
 const Title = styled.h1`
   font-family: Playfair Display;
@@ -18,11 +22,40 @@ const Title = styled.h1`
   text-transform: uppercase;
 `
 
+const Details = styled.div`
+  margin-top: 100px;
+  display: flex;
+
+  ${media.small`
+    flex-direction: column-reverse;
+    width: 100%;
+    align-items: center;
+  `}
+  ${media.medium`
+    flex-direction: column-reverse;
+    align-items: end;
+  `}
+  ${media.large`
+    flex-direction: row;
+  `}
+
+`
+
 const Contacts = styled.div`
   display: flex;
   flex-direction: row;
   max-width: 600px;
   flex-wrap: wrap;
+  ${media.small`
+    flex-direction: column;
+  `}
+  ${media.medium`
+    flex-direction: row;
+  `}
+  ${media.large`
+    flex-direction: row;
+
+  `}
 `
 
 const ClickDiv = styled.a`
@@ -31,13 +64,30 @@ const ClickDiv = styled.a`
 `
 const ContactTile = styled.div`
   display: flex;
-  flex-direction: column;
-  margin-right: 100px;
-  margin-bottom: 50px;
-  align-items: end;
+  ${media.small`
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 20px;
+  `}
+  ${media.medium`
+    flex-direction: column;
+    align-items: end;
+    margin-right: 100px;
+    margin-bottom: 50px;
+  `}
+  ${media.large`
+    flex-direction: column;
+    align-items: end;
+    margin-right: 100px;
+    margin-bottom: 50px;
+  `}
+
 `
 const ContactImg = styled.img`
   height: 25px;
+  ${media.small`
+    margin-right: 20px;
+  `}
 `
 
 const ContactDescription = styled.span`
@@ -51,7 +101,16 @@ const ContactDescription = styled.span`
 
 const ProfileImg = styled.img`
   height: 150px;
+  width: 150px;
   margin-top: 10px;
+  border-radius: 75px;
+  ${media.small`
+    margin-bottom: 40px;
+  `}
+  ${media.medium`
+    margin-left: 100px;
+    margin-bottom: 40px;
+  `}
 `
 
 const Contact = React.forwardRef((props, ref) => (
@@ -60,7 +119,7 @@ const Contact = React.forwardRef((props, ref) => (
       <RevealingText color={'#fff'}>
         <Title>Contact</Title>
       </RevealingText>
-      <div style={{ display: 'flex', flexDirection: 'row',   marginTop: '100px'}}>
+      <Details>
         <Contacts>
           <ClickDiv href='mailto:hello@varunag.com'>
             <ContactTile>
@@ -96,7 +155,7 @@ const Contact = React.forwardRef((props, ref) => (
           </ClickDiv>
         </Contacts>
         <ProfileImg src='/static/profile-image.jpg' />
-      </div>
+      </Details>
     </Header>
   </Section>
 ))
