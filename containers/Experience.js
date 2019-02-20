@@ -153,33 +153,33 @@ const Experience = React.forwardRef((props, ref) => (
             <JobDescription>
               Project management of medical facilities, Business Cases,
               Procurement, Contact Administration, Stakeholder Management,
-              Quality Assurance ...
+              Quality Assurance
             </JobDescription>
             <JobTitle>
               Transvalue Management, Melbourne – Engineering Analyst
             </JobTitle>
             <JobDescription>
               Planning and Feasibility Assessment Reports for government
-              transport projects ...
+              transport projects
             </JobDescription>
             <JobTitle>
               United Engineers, Singapore – Environmental Engineer
             </JobTitle>
             <JobDescription>
-              Project Management, Structural Drawings and Force Analysis ...
+              Project Management, Structural Drawings and Force Analysis
             </JobDescription>
             <JobTitle>
               Meinhardt Infrastructure, Singapore – Structural Engineer Intern
             </JobTitle>
             <JobDescription>
               Structural Analysis and Finite Element Analysis on underground
-              rail stations ...
+              rail stations
             </JobDescription>
             <JobTitle>
               WS Atkins & Oversees, Bahrain – Engineering Intern
             </JobTitle>
             <JobDescription>
-              Method Statements for contractors, Structural Drawings ...
+              Method Statements for contractors, Structural Drawings
             </JobDescription>
           </CivilJob>
         </Header>

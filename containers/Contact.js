@@ -36,7 +36,8 @@ const Details = styled.div`
     align-items: end;
   `}
   ${media.large`
-    flex-direction: row;
+    flex-direction: column-reverse;
+    align-items: end;
   `}
 
 `
@@ -108,6 +109,10 @@ const ProfileImg = styled.img`
     margin-bottom: 40px;
   `}
   ${media.medium`
+    margin-left: 100px;
+    margin-bottom: 40px;
+  `}
+  ${media.large`
     margin-left: 100px;
     margin-bottom: 40px;
   `}

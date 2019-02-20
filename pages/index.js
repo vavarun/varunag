@@ -22,10 +22,9 @@ const Container = styled.div`
 `
 
 const Profile = styled.div`
-  max-width: '650px',
   display: 'flex',
   flex-direction: 'column',
-    margin-right: '100px',
+  margin-right: '100px',
   ${media.small`margin-right: 20px;`}
   ${media.medium`margin-right: 75px;`}
   ${media.large`margin-right: 100px;`}
@@ -66,7 +65,7 @@ export default function App() {
                 justifyContent: 'space-between',
               }}
             >
-              <Profile>
+              <Profile style={{ maxWidth: '650px'}}>
                 <AboutMe ref={refs.aboutme} />
                 <Experience ref={refs.experience} />
                 <Projects ref={refs.projects}/>

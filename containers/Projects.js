@@ -41,7 +41,7 @@ const ProjectDescription = styled.span`
   line-height: 23px;
   font-size: 16px;
   font-style: normal;
-  margin-top: 25px;
+  margin-top: 20px;
 `
 
 const StackHeading = styled.span`
@@ -50,15 +50,16 @@ const StackHeading = styled.span`
   font-weight: bold;
   line-height: 23px;
   font-size: 16px;
-  margin-top: 25px;
+  margin-top: 20px;
 `
 
 const Stack = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 15px;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 `
 
 const StackImg = styled.img`
