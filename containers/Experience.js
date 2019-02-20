@@ -114,8 +114,8 @@ const Experience = React.forwardRef((props, ref) => (
           <Year>MARCH 2018 - PRESENT</Year>
           <Span>
             BookUp.io is an online platform for SMEs to manage their customers
-            effectively and efficiently. The platform provides an automated
-            solution for CMS, CRM, Digital Payments, Bookings, SEO, Analytics,
+            effectively and efficiently. The platform provides an automated solution and instant
+            deployment of CMS, CRM, Digital Payments, Bookings, SEO, Analytics,
             Calendar, Notifications, and Website Builder.
           </Span>
           <Span>

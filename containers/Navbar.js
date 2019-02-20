@@ -103,11 +103,14 @@ function Navbar({ onScrollIntoView }) {
                   toggle={value}
                   onClick={() => onScrollIntoView('education')}
                 >
-                  Education
+                  Experience
                 </Link>
-                <NextLink href="/blog">
-                  <Link toggle={value}>Blog</Link>
-                </NextLink>
+                <Link
+                  toggle={value}
+                  onClick={() => onScrollIntoView('projects')}
+                >
+                  Projects
+                </Link>
               </LinkWrapper>
             )}
             <Toggle />

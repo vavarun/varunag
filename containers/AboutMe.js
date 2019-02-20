@@ -42,7 +42,7 @@ const AboutMe = React.forwardRef((props, ref) => (
         I have worked across multiple countries, developing good client
         management, communication and organizational skills along the way. My
         progressive engineering experience has allowed me to work in business
-        development, web technology, engineering modelling and real-estate
+        development, web technology, mathematical engineering modelling and land
         development.
       </Span>
     </Header>
