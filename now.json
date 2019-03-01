@@ -5,5 +5,12 @@
       "src": "package.json",
       "use": "@now/next"
     }
+  ],
+  "routes": [
+    {
+      "src": "/rd/(.*)",
+      "status": 302,
+      "dest": "/"
+    }
   ]
 }
