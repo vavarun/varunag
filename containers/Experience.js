@@ -111,12 +111,13 @@ const Experience = React.forwardRef((props, ref) => (
             <Title>Experience</Title>
           </RevealingText>
           <Job>BOOKUP.io , CO-FOUNDER & FULL STACK DEVELOPER</Job>
-          <Year>MARCH 2018 - PRESENT</Year>
+          <Year>MARCH 2017 - PRESENT</Year>
           <Span>
             BookUp.io is an online platform for SMEs to manage their customers
-            effectively and efficiently. The platform provides an automated solution and instant
-            deployment of CMS, CRM, Digital Payments, Bookings, SEO, Analytics,
-            Calendar, Notifications, and Website Builder.
+            effectively and efficiently. The platform provides an automated
+            solution and instant deployment of CMS, CRM, Digital Payments,
+            Bookings, SEO, Analytics, Calendar, Notifications, and Website
+            Builder.
           </Span>
           <Span>
             My role was an end to end Software Developer which also included
