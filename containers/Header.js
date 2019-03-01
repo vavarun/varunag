@@ -53,11 +53,12 @@ const Img = styled.img`
   bottom: 0;
   right: 50%;
   left: 50%;
+  cursor: pointer;
 `
 
 function Header({ onScrollIntoView }) {
   return (
-     <ThemeContext.Consumer>
+    <ThemeContext.Consumer>
       {({ value }) => {
         return (
           <Section>
@@ -68,15 +69,24 @@ function Header({ onScrollIntoView }) {
               <Title>Agarwal</Title>
             </RevealingText>
             <Caption>
-              Software developer + Entrepreneur with a passion for building things.
-              Currently based in Barcelona
+              Software developer + Entrepreneur with a passion for building
+              things. Currently based in Barcelona
             </Caption>
-            <Button onClick={() => onScrollIntoView('contact')}>Contact Me</Button>
-            <Img src={value ? "/static/down-arrow-dark.svg" : "/static/down-arrow-light.svg"} />
+            <Button onClick={() => onScrollIntoView('contact')}>
+              Contact Me
+            </Button>
+            <Img
+              onClick={() => onScrollIntoView('aboutme')}
+              src={
+                value
+                  ? '/static/down-arrow-dark.svg'
+                  : '/static/down-arrow-light.svg'
+              }
+            />
           </Section>
-            )
-          }}
-      </ThemeContext.Consumer>
+        )
+      }}
+    </ThemeContext.Consumer>
   )
 }
 
