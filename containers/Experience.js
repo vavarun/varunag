@@ -153,7 +153,7 @@ const Experience = React.forwardRef((props, ref) => (
             </JobTitle>
             <JobDescription>
               Project management of medical facilities, Business Cases,
-              Procurement, Contact Administration, Stakeholder Management,
+              Procurement, Contract Administration, Stakeholder Management,
               Quality Assurance
             </JobDescription>
             <JobTitle>
