@@ -24,7 +24,7 @@ const Slider = styled.span`
   transition: 0.4s;
 
   cursor: pointer;
-  background-color: #252323;
+  background-color: #504e4e;
   border-radius: 38px;
 
   ${Checkbox}:checked + & {
@@ -54,13 +54,24 @@ const Slider = styled.span`
   }
 `
 
-const Img = styled.img`
+const SunImg = styled.img`
   position: absolute;
   height: 24px;
   width: 24px;
   bottom: 7px;
-  left: ${props => (props.toggle ? '13px' : '63px')};
+  left: 13px;
+  opacity: ${props => (props.toggle ? 1 : 0)};
   cursor: pointer;
+`
+
+const MoonImg = styled.img`
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  bottom: 7px;
+  left: 63px;
+  cursor: pointer;
+  opacity: ${props => (props.toggle ? 0 : 1)};
 `
 
 class Toggle extends React.PureComponent {
@@ -71,10 +82,8 @@ class Toggle extends React.PureComponent {
           <Wrapper>
             <Checkbox onClick={toggleTheme} toggle={value} />
             <Slider />
-            <Img
-              src={value ? '/static/toggle-sun.svg' : '/static/toggle-moon.svg'}
-              toggle={value}
-            />
+            <SunImg src="/static/toggle-sun.svg" toggle={value} />
+            <MoonImg src="/static/toggle-moon.svg" toggle={value} />
           </Wrapper>
         )}
       </ThemeContext.Consumer>
