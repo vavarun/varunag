@@ -9,8 +9,7 @@
   "routes": [
     {
       "src": "/rd/(.*)",
-      "status": 302,
-      "dest": "/"
+      "dest": "/index.js"
     }
   ]
 }

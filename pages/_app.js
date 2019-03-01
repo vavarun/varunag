@@ -2,8 +2,6 @@ import App, { Container } from 'next/app'
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 
-import media from '../utils/media'
-
 export const ThemeContext = React.createContext({
   value: false,
   toggleTheme: () => {},
@@ -44,7 +42,21 @@ export default class MyApp extends App {
     window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('resize', this.setDeviceWidth)
     this.setState({ screen: this.setDeviceWidth(window.innerWidth) })
+    console.log(
+      '\n\
+    **********************************************************\n\
+    Hi, Thanks for visiting my website.\n\
+    If you are interested to know a little bit about the stack.\n\
+    This was built on Next.js, React, Now, Styled-components.\n\
+    \n\
+    \n\
+    \n\
+    \n\
+    Please feel free to get in touch with me.\n\
+    **********************************************************'
+    )
   }
+  // If you type "Like" in the console below, I shall receive an email of appreciation.\n\
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
@@ -56,7 +68,7 @@ export default class MyApp extends App {
     this.setState(state => ({
       value: !state.value,
     }))
-    localStorage.setItem('themeColor', 'false');
+    localStorage.setItem('themeColor', 'false')
   }
 
   setDeviceWidth = widthPx =>
@@ -79,6 +91,7 @@ export default class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props
+
     return (
       <ThemeContext.Provider value={this.state}>
         <Container ref={this.container}>
