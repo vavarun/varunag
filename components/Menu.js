@@ -63,7 +63,7 @@ const Link = styled.button`
   color: ${({ menuTheme }) => (menuTheme ? '#fff' : '#111')};
   ${Link}:hover {
     color: ${({ menuTheme }) => (menuTheme ? '#111' : '#fff')};
-  }  
+  }
 `
 
 const MenuButton = styled.div`
@@ -85,7 +85,6 @@ class Menu extends React.Component {
   render() {
     const { toggle } = this.state
     const { theme, onScrollIntoView } = this.props
-    console.log(theme)
     return (
       <>
         <MobileMenu toggle={toggle} menuTheme={theme}>
@@ -97,26 +96,46 @@ class Menu extends React.Component {
             <Bar2 toggle={toggle} menuTheme={theme} />
             <Bar3 toggle={toggle} menuTheme={theme} />
           </MenuButton>
-          <Link onClick={() => {
-            onScrollIntoView('aboutme')
-            this.setState({ toggle: false})
-          }}>About Me</Link>
-          <Link onClick={() => {
-            onScrollIntoView('experience')
-            this.setState({ toggle: false})
-          }}>Experience</Link>
-          <Link onClick={() => {
-            onScrollIntoView('projects')
-            this.setState({ toggle: false})
-          }}>Projects</Link>
-          <Link onClick={() => {
-            onScrollIntoView('education')
-            this.setState({ toggle: false})
-          }}>Education</Link>
-          <Link onClick={() => {
-            onScrollIntoView('contact')
-            this.setState({ toggle: false})
-          }}>Contact</Link>
+          <Link
+            onClick={() => {
+              onScrollIntoView('aboutme')
+              this.setState({ toggle: false })
+            }}
+          >
+            About Me
+          </Link>
+          <Link
+            onClick={() => {
+              onScrollIntoView('experience')
+              this.setState({ toggle: false })
+            }}
+          >
+            Experience
+          </Link>
+          <Link
+            onClick={() => {
+              onScrollIntoView('projects')
+              this.setState({ toggle: false })
+            }}
+          >
+            Projects
+          </Link>
+          <Link
+            onClick={() => {
+              onScrollIntoView('education')
+              this.setState({ toggle: false })
+            }}
+          >
+            Education
+          </Link>
+          <Link
+            onClick={() => {
+              onScrollIntoView('contact')
+              this.setState({ toggle: false })
+            }}
+          >
+            Contact
+          </Link>
         </MobileMenu>
         <NavbarButton
           toggle={toggle}
