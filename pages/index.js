@@ -1,19 +1,19 @@
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import styled from 'styled-components'
 
+import Header from '../containers/Header'
+import Navbar from '../containers/Navbar'
 import { ThemeContext } from '../pages/_app'
 import media from '../utils/media'
 
-import Header from '../containers/Header'
-import Navbar from '../containers/Navbar'
-import ScrollBar from '../containers/ScrollBar'
-
-import Skills from '../containers/Skills'
-import AboutMe from '../containers/AboutMe'
-import Experience from '../containers/Experience'
-import Projects from '../containers/Projects'
-import Education from '../containers/Education'
-import Contact from '../containers/Contact'
+const AboutMe = dynamic(() => import('../containers/AboutMe'))
+const Experience = dynamic(() => import('../containers/Experience'))
+const Projects = dynamic(() => import('../containers/Projects'))
+const Education = dynamic(() => import('../containers/Education'))
+const ScrollBar = dynamic(() => import('../containers/ScrollBar'))
+const Skills = dynamic(() => import('../containers/Skills'))
+const Contact = dynamic(() => import('../containers/Contact'))
 
 const Container = styled.div`
   ${media.small`margin: 0px 20px;`}
@@ -30,6 +30,9 @@ const Profile = styled.div`
   ${media.large`margin-right: 100px;`}
 `
 export default function App() {
+  const [mounted, setMounted] = React.useState(false)
+  React.useEffect(() => setMounted(true), [])
+
   const refs = {
     aboutme: React.createRef(),
     experience: React.createRef(),
@@ -57,25 +60,26 @@ export default function App() {
             </Head>
             <Navbar onScrollIntoView={scrollSectionIntoView} />
             <Header onScrollIntoView={scrollSectionIntoView} />
-            <div
-              style={{
-                paddingBottom: '28px',
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-              }}
-            >
-              <Profile style={{ maxWidth: '650px'}}>
-                <AboutMe ref={refs.aboutme} />
-                <Experience ref={refs.experience} />
-                <Projects ref={refs.projects}/>
-                <Education ref={refs.education}/>
-              </Profile>
-              {screen !== 'small' && <Skills />}
-              {screen === 'large' ? <ScrollBar /> : undefined}
-            </div>
-            <Contact ref={refs.contact} />
-
+            {mounted && (
+              <div
+                style={{
+                  paddingBottom: '28px',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <Profile style={{ maxWidth: '650px' }}>
+                  <AboutMe ref={refs.aboutme} />
+                  <Experience ref={refs.experience} />
+                  <Projects ref={refs.projects} />
+                  <Education ref={refs.education} />
+                </Profile>
+                {screen !== 'small' && <Skills />}
+                {screen === 'large' ? <ScrollBar /> : undefined}
+              </div>
+            )}
+            {mounted && <Contact ref={refs.contact} />}
           </Container>
         )
       }}
