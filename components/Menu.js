@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
+import { useState } from 'react'
 import styled from 'styled-components'
-
-import { ThemeContext } from '../pages/_app'
 
 const Bar1 = styled.div`
   width: 35px;
@@ -10,7 +9,7 @@ const Bar1 = styled.div`
   margin: 6px 0;
   transition: 0.4s;
   background-color: ${({ menuTheme }) => (menuTheme ? '#111' : '#fff')};
-  ${props => props.toggle && 'transform: rotate(-45deg) translate(-9px, 6px);'}
+  ${props => props.show && 'transform: rotate(-45deg) translate(-9px, 6px);'}
 `
 
 const Bar2 = styled.div`
@@ -20,7 +19,7 @@ const Bar2 = styled.div`
   margin: 6px 0;
   transition: 0.4s;
   background-color: ${({ menuTheme }) => (menuTheme ? '#111' : '#fff')};
-  ${props => props.toggle && 'opacity: 0;'}
+  ${props => props.show && 'opacity: 0;'}
 `
 
 const Bar3 = styled.div`
@@ -29,7 +28,7 @@ const Bar3 = styled.div`
   margin: 6px 0;
   transition: 0.4s;
   background-color: ${({ menuTheme }) => (menuTheme ? '#111' : '#fff')};
-  ${props => props.toggle && 'transform: rotate(45deg) translate(-8px, -8px);'};
+  ${props => props.show && 'transform: rotate(45deg) translate(-8px, -8px);'};
 `
 const MobileMenu = styled.div`
   height: 100vh;
@@ -42,7 +41,7 @@ const MobileMenu = styled.div`
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  ${props => props.toggle && 'width: 250px;'};
+  ${props => props.show && 'width: 250px;'};
 `
 
 const Link = styled.button`
@@ -74,84 +73,44 @@ const MenuButton = styled.div`
 `
 
 const NavbarButton = styled.div`
-  ${props => props.toggle && 'opacity: 0;'}
+  ${props => props.show && 'opacity: 0;'}
 `
 
-class Menu extends React.Component {
-  state = {
-    toggle: false,
+function Menu({ theme, onScrollIntoView }) {
+  const [show, setShow] = useState(false)
+  const handleSectionSelect = section => {
+    onScrollIntoView(section)
+    setShow(false)
   }
 
-  render() {
-    const { toggle } = this.state
-    const { theme, onScrollIntoView } = this.props
-    return (
-      <>
-        <MobileMenu toggle={toggle} menuTheme={theme}>
-          <MenuButton
-            toggle={toggle}
-            onClick={() => this.setState({ toggle: !toggle })}
-          >
-            <Bar1 toggle={toggle} menuTheme={theme} />
-            <Bar2 toggle={toggle} menuTheme={theme} />
-            <Bar3 toggle={toggle} menuTheme={theme} />
-          </MenuButton>
-          <Link
-            onClick={() => {
-              onScrollIntoView('aboutme')
-              this.setState({ toggle: false })
-            }}
-          >
-            About Me
-          </Link>
-          <Link
-            onClick={() => {
-              onScrollIntoView('experience')
-              this.setState({ toggle: false })
-            }}
-          >
-            Experience
-          </Link>
-          <Link
-            onClick={() => {
-              onScrollIntoView('projects')
-              this.setState({ toggle: false })
-            }}
-          >
-            Projects
-          </Link>
-          <Link
-            onClick={() => {
-              onScrollIntoView('education')
-              this.setState({ toggle: false })
-            }}
-          >
-            Education
-          </Link>
-          <Link
-            onClick={() => {
-              onScrollIntoView('contact')
-              this.setState({ toggle: false })
-            }}
-          >
-            Contact
-          </Link>
-        </MobileMenu>
-        <NavbarButton
-          toggle={toggle}
-          onClick={() => this.setState({ toggle: !toggle })}
-        >
-          <Bar1 toggle={toggle} menuTheme={theme} />
-          <Bar2 toggle={toggle} menuTheme={theme} />
-          <Bar3 toggle={toggle} menuTheme={theme} />
-        </NavbarButton>
-      </>
-    )
-  }
+  return (
+    <>
+      <MobileMenu show={show} menuTheme={theme}>
+        <MenuButton onClick={() => setShow(val => !val)}>
+          <Bar1 show={show} menuTheme={theme} />
+          <Bar2 show={show} menuTheme={theme} />
+          <Bar3 show={show} menuTheme={theme} />
+        </MenuButton>
+        <Link onClick={() => handleSectionSelect('aboutme')}>About Me</Link>
+        <Link onClick={() => handleSectionSelect('experience')}>
+          Experience
+        </Link>
+        <Link onClick={() => handleSectionSelect('projects')}>Projects</Link>
+        <Link onClick={() => handleSectionSelect('education')}>Education</Link>
+        <Link onClick={() => handleSectionSelect('contact')}>Contact</Link>
+      </MobileMenu>
+      <NavbarButton show={show} onClick={() => setShow(val => !val)}>
+        <Bar1 show={show} menuTheme={theme} />
+        <Bar2 show={show} menuTheme={theme} />
+        <Bar3 show={show} menuTheme={theme} />
+      </NavbarButton>
+    </>
+  )
 }
 
 Menu.propTypes = {
   theme: PropTypes.bool,
+  onScrollIntoView: PropTypes.func,
 }
 
 export default Menu

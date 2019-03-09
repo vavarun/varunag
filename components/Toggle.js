@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { ThemeContext } from '../pages/_app'
 
 const Wrapper = styled.label`
@@ -74,21 +75,19 @@ const MoonImg = styled.img`
   opacity: ${props => (props.toggle ? 0 : 1)};
 `
 
-class Toggle extends React.PureComponent {
-  render() {
-    return (
-      <ThemeContext.Consumer>
-        {({ value, toggleTheme }) => (
-          <Wrapper>
-            <Checkbox onClick={toggleTheme} toggle={value} />
-            <Slider />
-            <SunImg src="/static/toggle-sun.svg" toggle={value} />
-            <MoonImg src="/static/toggle-moon.svg" toggle={value} />
-          </Wrapper>
-        )}
-      </ThemeContext.Consumer>
-    )
-  }
+function Toggle() {
+  return (
+    <ThemeContext.Consumer>
+      {({ value, toggleTheme }) => (
+        <Wrapper>
+          <Checkbox onClick={toggleTheme} toggle={value} />
+          <Slider />
+          <SunImg src="/static/toggle-sun.svg" toggle={value} />
+          <MoonImg src="/static/toggle-moon.svg" toggle={value} />
+        </Wrapper>
+      )}
+    </ThemeContext.Consumer>
+  )
 }
 
-export default Toggle
+export default React.memo(Toggle)
