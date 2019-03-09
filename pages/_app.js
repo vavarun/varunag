@@ -39,7 +39,6 @@ export default class MyApp extends App {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('resize', this.setDeviceWidth)
     this.setState({ screen: this.setDeviceWidth(window.innerWidth) })
     console.log(
@@ -59,7 +58,6 @@ export default class MyApp extends App {
   // If you type "Like" in the console below, I shall receive an email of appreciation.\n\
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
     window.removeEventListener('resize', this.setDeviceWidth)
   }
   container = React.createRef()
@@ -75,19 +73,6 @@ export default class MyApp extends App {
     Object.keys(sizes).find(size => {
       return widthPx >= sizes[size]
     })
-
-  handleScroll = () => {
-    let totalHeight = document.body.clientHeight
-    let headerHeight = window.innerHeight
-    let scrollY = window.scrollY
-
-    this.setState({
-      scrollY,
-      headerHeight,
-      scrollPosition:
-        (scrollY - headerHeight) / (totalHeight - headerHeight - headerHeight),
-    })
-  }
 
   render() {
     const { Component, pageProps } = this.props

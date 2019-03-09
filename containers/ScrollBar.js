@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
+import { useWindowScrollPosition, useWindowSize } from '../hooks'
 import media from '../utils/media'
-import { ThemeContext } from '../pages/_app'
 
 const Bar = styled.div`
   position: fixed;
@@ -12,8 +12,6 @@ const Bar = styled.div`
   border-radius: 5px;
   z-index: 99;
   ${media.large`right: 120px;`}
-
-
 `
 const Scroll = styled.div`
   height: 100px;
@@ -25,25 +23,20 @@ const Scroll = styled.div`
 `
 
 function ScrollBar() {
+  const { innerHeight, scrollHeight } = useWindowSize()
+  const { y: scrollY } = useWindowScrollPosition()
+  const scrollPosition =
+    (scrollY - innerHeight) / (scrollHeight - innerHeight - innerHeight)
+  let topPosition
+  if (scrollY >= 0 && scrollY <= innerHeight - (innerHeight - 460) / 2) {
+    topPosition = innerHeight - scrollY
+  } else if (scrollY >= innerHeight - (innerHeight - 460) / 2) {
+    topPosition = (innerHeight - 460) / 2
+  }
   return (
-    <ThemeContext.Consumer>
-      {({ scrollY, scrollPosition, headerHeight }) => {
-        let topPosition
-        if (
-          scrollY >= 0 &&
-          scrollY <= headerHeight - (headerHeight - 460) / 2
-        ) {
-          topPosition = headerHeight - scrollY
-        } else if (scrollY >= headerHeight - (headerHeight - 460) / 2) {
-          topPosition = (headerHeight - 460) / 2
-        }
-        return (
-          <Bar top={topPosition}>
-            <Scroll scroll={scrollPosition} />
-          </Bar>
-        )
-      }}
-    </ThemeContext.Consumer>
+    <Bar top={topPosition}>
+      <Scroll scroll={scrollPosition} />
+    </Bar>
   )
 }
 
