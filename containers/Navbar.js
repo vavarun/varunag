@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { ThemeContext } from '../pages/_app'
-import Toggle from '../components/Toggle'
 import Menu from '../components/Menu'
+import Toggle from '../components/Toggle'
+import { ThemeContext } from '../pages/_app'
 import media from '../utils/media'
 
 const ImgDiv = styled.div`

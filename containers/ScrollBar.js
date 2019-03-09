@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-import media from '../utils/media'
 import { ThemeContext } from '../pages/_app'
+import media from '../utils/media'
 
 const Bar = styled.div`
   position: fixed;

@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
-import media from '../utils/media'
-import { ThemeContext } from '../pages/_app'
-
 import RevealingText from '../components/RevealingText/index'
+import { ThemeContext } from '../pages/_app'
+import media from '../utils/media'
 
 const Header = styled.header`
   display: flex;

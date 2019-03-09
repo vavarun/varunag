@@ -8,7 +8,7 @@ const Wrapper = styled.section`
   opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
 `
 
-const Section = React.forwardRef(({ children, name }, ref) => (
+const Section = React.forwardRef(({ children }, ref) => (
   <TrackVisibility once partialVisibility>
     {({ isVisible }) => (
       <Wrapper ref={ref} isVisible={isVisible}>

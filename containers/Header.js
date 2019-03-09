@@ -1,9 +1,9 @@
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import RevealingText from '../components/RevealingText/index'
-import media from '../utils/media'
 import { ThemeContext } from '../pages/_app'
+import media from '../utils/media'
 
 const Section = styled.header`
   height: 100vh;

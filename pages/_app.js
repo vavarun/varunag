@@ -42,6 +42,7 @@ export default class MyApp extends App {
     window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('resize', this.setDeviceWidth)
     this.setState({ screen: this.setDeviceWidth(window.innerWidth) })
+    // eslint-disable-next-line no-console
     console.log(
       '\n\
     **********************************************************\n\

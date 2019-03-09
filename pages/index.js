@@ -1,19 +1,17 @@
 import Head from 'next/head'
 import styled from 'styled-components'
 
-import { ThemeContext } from '../pages/_app'
-import media from '../utils/media'
-
+import AboutMe from '../containers/AboutMe'
+import Contact from '../containers/Contact'
+import Education from '../containers/Education'
+import Experience from '../containers/Experience'
 import Header from '../containers/Header'
 import Navbar from '../containers/Navbar'
-import ScrollBar from '../containers/ScrollBar'
-
-import Skills from '../containers/Skills'
-import AboutMe from '../containers/AboutMe'
-import Experience from '../containers/Experience'
 import Projects from '../containers/Projects'
-import Education from '../containers/Education'
-import Contact from '../containers/Contact'
+import ScrollBar from '../containers/ScrollBar'
+import Skills from '../containers/Skills'
+import { ThemeContext } from '../pages/_app'
+import media from '../utils/media'
 
 const Container = styled.div`
   ${media.small`margin: 0px 20px;`}
@@ -65,17 +63,16 @@ export default function App() {
                 justifyContent: 'space-between',
               }}
             >
-              <Profile style={{ maxWidth: '650px'}}>
+              <Profile style={{ maxWidth: '650px' }}>
                 <AboutMe ref={refs.aboutme} />
                 <Experience ref={refs.experience} />
-                <Projects ref={refs.projects}/>
-                <Education ref={refs.education}/>
+                <Projects ref={refs.projects} />
+                <Education ref={refs.education} />
               </Profile>
               {screen !== 'small' && <Skills />}
               {screen === 'large' ? <ScrollBar /> : undefined}
             </div>
             <Contact ref={refs.contact} />
-
           </Container>
         )
       }}

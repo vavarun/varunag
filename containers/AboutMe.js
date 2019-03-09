@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-import Section from '../components/Section'
 import RevealingText from '../components/RevealingText/index'
+import Section from '../components/Section'
 
 const Header = styled.header`
   display: flex;
@@ -27,7 +27,7 @@ const Span = styled.span`
 `
 
 const AboutMe = React.forwardRef((props, ref) => (
-  <Section name="aboutme" ref={ref}>
+  <Section ref={ref}>
     <Header>
       <RevealingText color={'#fff'}>
         <Title>About Me</Title>

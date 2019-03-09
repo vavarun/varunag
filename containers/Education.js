@@ -43,48 +43,30 @@ const Year = styled.span`
   line-height: 23px;
   font-size: 16px;
   margin-top: 5px;
-
 `
 
 const Education = React.forwardRef((props, ref) => (
-  <Section style={{ justifyContent: 'end' }} name="education" ref={ref}>
+  <Section style={{ justifyContent: 'end' }} ref={ref}>
     <Header>
       <RevealingText color={'#fff'}>
         <Title>Education</Title>
       </RevealingText>
-      <EducationTitle>
-        Codeworks
-      </EducationTitle>
+      <EducationTitle>Codeworks</EducationTitle>
       <Program>FULL STACK DEVELOPMENT PROGRAM</Program>
-      <Year>
-        Completed February 2017
-      </Year>
-      <EducationTitle>
-        Imperial College London
-      </EducationTitle>
+      <Year>Completed February 2017</Year>
+      <EducationTitle>Imperial College London</EducationTitle>
       <Program>B.Eng Civil Engineering</Program>
-      <Year>
-        Completed February 2011
-      </Year>
+      <Year>Completed February 2011</Year>
 
-      <EducationTitle>
-        University of Queensland
-      </EducationTitle>
+      <EducationTitle>University of Queensland</EducationTitle>
       <Program>Civil and Environmental Engineering</Program>
-      <Year>
-        Completed July 2013
-      </Year>
+      <Year>Completed July 2013</Year>
 
-      <EducationTitle>
-        THE LONDON SCHOOL OF ECONOMICS
-      </EducationTitle>
-      <Program>CERTIFICATE  MANAGERIAL ACCOUNTING AND FINANCIAL CONTROL</Program>
-      <Year>
-        Completed August 2011
-      </Year>
-
+      <EducationTitle>THE LONDON SCHOOL OF ECONOMICS</EducationTitle>
+      <Program>CERTIFICATE MANAGERIAL ACCOUNTING AND FINANCIAL CONTROL</Program>
+      <Year>Completed August 2011</Year>
     </Header>
-    </Section>
-  ))
+  </Section>
+))
 
 export default Education

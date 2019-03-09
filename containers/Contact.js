@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
-import media from '../utils/media'
-
 import RevealingText from '../components/RevealingText/index'
 import Section from '../components/Section'
+import media from '../utils/media'
 
 const Header = styled.header`
   display: flex;
@@ -13,7 +12,6 @@ const Header = styled.header`
   margin-top: 50px;
   height: 100vh;
   width: 100vh;
-
 `
 const Title = styled.h1`
   font-family: Playfair Display;
@@ -119,47 +117,42 @@ const ProfileImg = styled.img`
 `
 
 const Contact = React.forwardRef((props, ref) => (
-  <Section name="contact" ref={ref}>
+  <Section ref={ref}>
     <Header>
       <RevealingText color={'#fff'}>
         <Title>Contact</Title>
       </RevealingText>
       <Details>
         <Contacts>
-          <ClickDiv href='mailto:hello@varunag.com'>
+          <ClickDiv href="mailto:hello@varunag.com">
             <ContactTile>
-              <ContactImg src="/static/email-icon.svg"/>
-              <ContactDescription>
-                hello@varunag.com
-              </ContactDescription>
+              <ContactImg src="/static/email-icon.svg" />
+              <ContactDescription>hello@varunag.com</ContactDescription>
             </ContactTile>
           </ClickDiv>
-          <ClickDiv href='https://www.linkedin.com/in/varun-ag/' target="_blank">
+          <ClickDiv
+            href="https://www.linkedin.com/in/varun-ag/"
+            target="_blank"
+          >
             <ContactTile>
-              <ContactImg src="/static/linkedin-icon.svg"/>
-              <ContactDescription>
-                linkedin.com/in/varun-ag/
-              </ContactDescription>
+              <ContactImg src="/static/linkedin-icon.svg" />
+              <ContactDescription>linkedin.com/in/varun-ag/</ContactDescription>
             </ContactTile>
           </ClickDiv>
-          <ClickDiv href='https://www.github.com/vavarun' target="_blank">
-            <ContactTile >
-              <ContactImg src="/static/github-icon.svg"/>
-              <ContactDescription>
-                github.com/vavarun
-              </ContactDescription>
+          <ClickDiv href="https://www.github.com/vavarun" target="_blank">
+            <ContactTile>
+              <ContactImg src="/static/github-icon.svg" />
+              <ContactDescription>github.com/vavarun</ContactDescription>
             </ContactTile>
           </ClickDiv>
-          <ClickDiv href='https://www.instagram.com/vavarun/' target="_blank">
+          <ClickDiv href="https://www.instagram.com/vavarun/" target="_blank">
             <ContactTile>
-              <ContactImg src="/static/instagram-icon.svg"/>
-              <ContactDescription>
-                instagram.com/vavarun
-              </ContactDescription>
+              <ContactImg src="/static/instagram-icon.svg" />
+              <ContactDescription>instagram.com/vavarun</ContactDescription>
             </ContactTile>
           </ClickDiv>
         </Contacts>
-        <ProfileImg src='/static/profile-image.jpg' />
+        <ProfileImg src="/static/profile-image.jpg" />
       </Details>
     </Header>
   </Section>

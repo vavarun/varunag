@@ -69,7 +69,7 @@ const StackImg = styled.img`
 `
 
 const Projects = React.forwardRef((props, ref) => (
-  <Section name="projects" ref={ref}>
+  <Section ref={ref}>
     <Header>
       <RevealingText color={'#fff'}>
         <Title>Projects</Title>
@@ -78,9 +78,9 @@ const Projects = React.forwardRef((props, ref) => (
       <Year style={{ color: '#c4c4c4' }}>2017</Year>
       <ProjectDescription>
         A movie recommendation engine which grabs your Spotify music listening
-        habits and movie preferences to provide you with great movie finds instantly for
-        your evening. It is currently deployed as a beta app on the
-        Apple TestFlight using React-Native.
+        habits and movie preferences to provide you with great movie finds
+        instantly for your evening. It is currently deployed as a beta app on
+        the Apple TestFlight using React-Native.
       </ProjectDescription>
       <StackHeading>Stack</StackHeading>
       <Stack>
@@ -112,9 +112,9 @@ const Projects = React.forwardRef((props, ref) => (
       <ProjectTitle>Duet</ProjectTitle>
       <Year style={{ color: '#c4c4c4' }}>2017</Year>
       <ProjectDescription>
-        Duet is a video dating iOS app which connects users via a video call with
-        Websockets and Redis. It was an innovative approach to the classic dating apps
-        by allowing users to have conversations on demand.
+        Duet is a video dating iOS app which connects users via a video call
+        with Websockets and Redis. It was an innovative approach to the classic
+        dating apps by allowing users to have conversations on demand.
       </ProjectDescription>
       <StackHeading>Stack</StackHeading>
       <Stack>
@@ -129,7 +129,7 @@ const Projects = React.forwardRef((props, ref) => (
         <StackImg title="NodeJS" src="/static/nodejs-icon.svg" />
       </Stack>
     </Header>
-    </Section>
+  </Section>
 ))
 
 export default Projects

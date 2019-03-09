@@ -31,10 +31,19 @@ export default class MyDocument extends Document {
           <meta property="og:title" content="Varun Agarwal" />
           <meta property="og:url" content="http://www.varunag.com" />
           <meta property="og:type" content="website" />
-          <meta property="og:description" content="Personal website of Varun Agarwal, a developer based in Barcelona" />
-          <meta property="og:image" content="http://www.varunag.com/static/profile-image.jpg" />
+          <meta
+            property="og:description"
+            content="Personal website of Varun Agarwal, a developer based in Barcelona"
+          />
+          <meta
+            property="og:image"
+            content="http://www.varunag.com/static/profile-image.jpg"
+          />
           <meta property="og:image:type" content="image/jpeg" />
-          <meta name="google-site-verification" content="ByCv0Fi4o8CbMj92I7pG7TNuzBLOxv-ZXNKG3IE7tJk" />
+          <meta
+            name="google-site-verification"
+            content="ByCv0Fi4o8CbMj92I7pG7TNuzBLOxv-ZXNKG3IE7tJk"
+          />
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -59,7 +68,6 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Roboto:400,500|Roboto+Condensed:300,300i,400,700"
             rel="stylesheet"
           />
-
         </Head>
         <body>
           <Main />

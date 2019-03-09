@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-import Section from '../components/Section'
 import RevealingText from '../components/RevealingText/index'
+import Section from '../components/Section'
 import { ThemeContext } from '../pages/_app'
 
 const Header = styled.header`
@@ -103,7 +103,7 @@ const JobDescription = styled.span`
 `
 
 const Experience = React.forwardRef((props, ref) => (
-  <Section name="experience" ref={ref}>
+  <Section ref={ref}>
     <ThemeContext.Consumer>
       {({ value }) => (
         <Header>
