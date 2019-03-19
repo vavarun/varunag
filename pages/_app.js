@@ -52,11 +52,11 @@ export default class MyApp extends App {
     \n\
     \n\
     \n\
+    If you type "Like" in the console below, I shall receive an email of appreciation.\n\
     Please feel free to get in touch with me.\n\
     **********************************************************'
     )
   }
-  // If you type "Like" in the console below, I shall receive an email of appreciation.\n\
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
